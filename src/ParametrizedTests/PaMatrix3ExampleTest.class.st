@@ -1,10 +1,13 @@
+"
+Testing class
+"
 Class {
 	#name : #PaMatrix3ExampleTest,
 	#superclass : #PaAbstractExampleTest,
 	#instVars : [
 		'option3'
 	],
-	#category : #ParametrizedTests
+	#category : #'ParametrizedTests-Tests'
 }
 
 { #category : #private }

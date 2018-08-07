@@ -1,7 +1,10 @@
+"
+Test case to check that the cases are correctly generated
+"
 Class {
 	#name : #PaSuiteTest,
 	#superclass : #ParametrizedTestCase,
-	#category : #ParametrizedTests
+	#category : #'ParametrizedTests-Tests'
 }
 
 { #category : #tests }

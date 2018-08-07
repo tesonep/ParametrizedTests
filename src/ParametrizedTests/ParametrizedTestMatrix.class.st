@@ -1,3 +1,8 @@
+"
+I represent the test configuration matrix of all the cases.
+Check the examples to see how to use me.
+
+"
 Class {
 	#name : #ParametrizedTestMatrix,
 	#superclass : #Object,
@@ -6,7 +11,7 @@ Class {
 		'options',
 		'cases'
 	],
-	#category : #ParametrizedTests
+	#category : #'ParametrizedTests-Core'
 }
 
 { #category : #cases }

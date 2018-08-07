@@ -1,7 +1,10 @@
+"
+Testing class
+"
 Class {
 	#name : #PaMatrixExampleTest,
 	#superclass : #PaAbstractExampleTest,
-	#category : #ParametrizedTests
+	#category : #'ParametrizedTests-Tests'
 }
 
 { #category : #private }

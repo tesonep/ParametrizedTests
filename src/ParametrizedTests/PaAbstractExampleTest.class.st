@@ -1,3 +1,6 @@
+"
+Testing class
+"
 Class {
 	#name : #PaAbstractExampleTest,
 	#superclass : #ParametrizedTestCase,
@@ -5,7 +8,7 @@ Class {
 		'option2',
 		'option1'
 	],
-	#category : #ParametrizedTests
+	#category : #'ParametrizedTests-Tests'
 }
 
 { #category : #private }

@@ -1,3 +1,8 @@
+"
+I represent a parameter in an expanded matrix.
+I know how to update the test case with my value.
+Also, I know how to print me when printing the test case. 
+"
 Class {
 	#name : #ParametrizedTestExpandedParameter,
 	#superclass : #Object,
@@ -5,7 +10,7 @@ Class {
 		'selector',
 		'valuable'
 	],
-	#category : #ParametrizedTests
+	#category : #'ParametrizedTests-Core'
 }
 
 { #category : #applying }
