@@ -75,7 +75,7 @@ ParametrizedTestCase class >> testParameters [
 ParametrizedTestCase >> cleanUpInstanceVariables [
 	| instanceVariablesNames |
 
-	instanceVariablesNames := #('testSelector' 'testParameters').
+	instanceVariablesNames := #('testSelector' 'parametersToUse').
 	self class allInstVarNames
 		do: [ :name | 
 			(instanceVariablesNames includes: name)
