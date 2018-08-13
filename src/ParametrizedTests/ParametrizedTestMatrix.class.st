@@ -17,13 +17,15 @@ Class {
 { #category : #cases }
 ParametrizedTestMatrix >> addCase: aCollection [
 
-	^ cases add: (aCollection asDictionary associations
+	cases add: (aCollection asDictionary associations
 		collect: [ :assoc | 
 			ParametrizedTestExpandedParameter new
 				selector: assoc key;
 				valuable: assoc value;
 				yourself ]
-		as: Array)
+		as: Array).
+		
+	^ self 
 ]
 
 { #category : #generating }
