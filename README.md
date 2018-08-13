@@ -51,4 +51,31 @@ The test Case should have a setter for
 
 Check the Examples to see how to use the different possible configurations.
 
-#Examples
+# Examples
+
+The API is quite simple, but there are two simple examples to show the use of generated matrix and set of cases.
+The example class *PaSimpleMatrixExampleTest* shows an example of a matrix. 
+
+```Smalltalk
+testParameters
+
+	^ ParametrizedTestMatrix new
+		forSelector: #item1 addOptions: { 1. 'a'. $c };
+		forSelector: #item2 addOptions: { 2. 'b'. $d };
+		forSelector: #collectionClass addOptions: 	{ Set. Bag. OrderedCollection }
+```
+
+This example generates 81 different cases, with all the combinations. 
+
+The second example uses a set of given cases. This example is shown in the test class *PaSelectedCasesExampleTest*
+
+```Smalltalk
+testParameters
+
+	^ ParametrizedTestMatrix new
+		addCase: { #number1 -> 2. #number2 -> 1.0. #result -> 3 };
+		addCase: { #number1 -> (2/3). #number2 -> (1/3). #result -> 1 };
+		yourself
+```
+
+This example generates exactly the two cases listed in the test.
