@@ -35,7 +35,7 @@ ParametrizedTestMatrix >> combinationsOf: aCollection [
 	aCollection ifEmpty: [ ^ #() ].
 	
 	first := aCollection first.
-	expandedParameters := first value collect: [ :each | ParametrizedTestExpandedParameter new selector: first key; valuable: each].
+	expandedParameters := first expand.
 	
 	inner := self combinationsOf: aCollection allButFirst.
 	inner ifEmpty: [ ^ expandedParameters collect: [ :each | { each } ] ].
@@ -45,25 +45,27 @@ ParametrizedTestMatrix >> combinationsOf: aCollection [
 
 { #category : #expanding }
 ParametrizedTestMatrix >> expandMatrix [
-	
 	| combinations |
-	combinations := self combinationsOf: options associations.
+	combinations := self combinationsOf: self options.
 	combinations ifEmpty: [ ^ cases ].
 	cases ifEmpty: [ ^ combinations ].
-	
 	^ combinations flatCollect: [ :aCase | cases collect: [ :each | aCase , each ] ]
 ]
 
 { #category : #addingOptions }
 ParametrizedTestMatrix >> forSelector: aSelector addOptions: someOptions [
-
-	options at: aSelector put: someOptions
+	options
+		add:
+			(ParametrizedTestOption new
+				selector: aSelector;
+				values: someOptions;
+				yourself)
 ]
 
 { #category : #initialization }
 ParametrizedTestMatrix >> initialize [
 	super initialize.
-	options := Dictionary new.
+	options := OrderedCollection new.
 	cases := OrderedCollection new
 ]
 
