@@ -34,7 +34,7 @@ This test matrix can be generated with cartesian product configurations or a set
 An example of #testParameters is: 
 
 ```Smalltalk
-testParameters
+MyTestCase class >> testParameters
 
 	^ ParametrizedTestMatrix new
 		forSelector: #option1 addOptions: #(a b c);
@@ -57,7 +57,7 @@ The API is quite simple, but there are two simple examples to show the use of ge
 The example class *PaSimpleMatrixExampleTest* shows an example of a matrix. 
 
 ```Smalltalk
-testParameters
+PaSimpleMatrixExampleTest class >> testParameters
 
 	^ ParametrizedTestMatrix new
 		forSelector: #item1 addOptions: { 1. 'a'. $c };
@@ -70,7 +70,7 @@ This example generates 81 different cases, with all the combinations.
 The second example uses a set of given cases. This example is shown in the test class *PaSelectedCasesExampleTest*
 
 ```Smalltalk
-testParameters
+PaSelectedCasesExampleTest class >> testParameters
 
 	^ ParametrizedTestMatrix new
 		addCase: { #number1 -> 2. #number2 -> 1.0. #result -> 3 };
