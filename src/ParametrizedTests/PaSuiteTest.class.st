@@ -19,6 +19,8 @@ PaSuiteTest >> testCasesHasTheCorrectNumberOfTests [
 PaSuiteTest >> testCasesHasTheCorrectTests [
 
 	| suite |
+	"We are creating a new suite from the given matrix.
+	This suite should have all the combinations of the matrix"
 	suite := PaCasesMatrixTest buildSuite.
 
 	"I run the setup to set the parametrized values in the test case"
